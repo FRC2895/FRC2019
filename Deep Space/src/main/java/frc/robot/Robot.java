@@ -23,6 +23,7 @@ public class Robot extends TimedRobot {
   @Override
   public void robotInit() {
     m_myRobot = new DifferentialDrive(new Spark(0), new Spark(1));
+    /* Left joystick on driver station */
     m_stick = new Joystick(0);
   }
 
