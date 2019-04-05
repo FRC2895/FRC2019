@@ -61,7 +61,7 @@ public class Robot extends TimedRobot {
     /* Drivetrade for driving robot */
     m_driveTrain.arcadeDrive(-m_drivestick.getY(),m_drivestick.getX());
     /* Hatch panel arm control */
-    double hatchPanelSpeed = 0.2*m_hatchstick.getY();
+    double hatchPanelSpeed = 0.3*m_hatchstick.getY();
     m_hatchdriveR.set(-hatchPanelSpeed);
     m_hatchdriveL.set(-hatchPanelSpeed);
   }
