@@ -52,14 +52,18 @@ public class Robot extends TimedRobot {
 
     /* Camera object on the Rio */
     CameraServer.getInstance().startAutomaticCapture();
-
-
  }
- 
+
+  @Override
+  public void autonomousPeriodic(){
+    teleopPeriodic();
+  }
+
+
   @Override
   public void teleopPeriodic(){
     /* Drivetrade for driving robot */
-    m_driveTrain.arcadeDrive(-m_drivestick.getY(),m_drivestick.getX());
+    m_driveTrain.arcadeDrive(m_drivestick.getY(),m_drivestick.getX());
     /* Hatch panel arm control */
     double hatchPanelSpeed = 0.3*m_hatchstick.getY();
     m_hatchdriveR.set(-hatchPanelSpeed);
